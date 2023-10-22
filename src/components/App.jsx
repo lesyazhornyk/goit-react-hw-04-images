@@ -40,7 +40,6 @@ const App = () => {
   );
 
   useEffect(() => {
-    console.log('check');
     document.addEventListener('keydown', handleKeyDown, false);
     return () => {
       document.removeEventListener('keydown', handleKeyDown, false);
