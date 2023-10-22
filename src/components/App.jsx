@@ -40,11 +40,13 @@ const App = () => {
   );
 
   useEffect(() => {
+    console.log('check');
     document.addEventListener('keydown', handleKeyDown, false);
     return () => {
       document.removeEventListener('keydown', handleKeyDown, false);
     };
-  });
+    // eslint-disable-next-line
+  }, []);
 
   useEffect(() => {
     if (page) {
@@ -71,6 +73,7 @@ const App = () => {
       }
       fetchData();
     }
+    // eslint-disable-next-line
   }, [page, query]);
 
   return (
